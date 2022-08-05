@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+
+	<meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Portfolio</title>
+
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+
+   <link href="inc3/portfolio.css" rel="stylesheet"/>
+
+    <!--pagepiling CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.css"/>
+    
+    <link href="images3/icon.png" rel="shortcut icon"/>
+    
+    <!--AOS CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    
+    <!--fontawsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+   
+   
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="inc3/portfolio.js"></script>
+
+    <!--pagepiling JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.js" ></script>
+
+   <!--typed JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>   
+    
+    <!--AOS JS-->        
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>       
+       
+                                
+    <script>
+
+			$(function(){ 
+
+		                $('#pagepiling').pagepiling({
+                    direction: 'vertical',     //스크롤 방향 (가로:horizontal, 세로:vertical, 기본값:vertical)
+                    menu: '#menu',                 //스크롤과 연동할 메뉴의 이름
+                    anchors: ['page1', 'page2', 'page3', 'page4'],           //각 메뉴의 연결 페이지 링크값
+                    sectionsColor: ['	#ffcc33', 'white', '	white','#ffcc33'],      //페이지별 배경색
+                    scrollingSpeed: 100,     //스크롤 후 마우스 휠 반응 속도
+                    loopBottom: true,    //마지막 장면에서 처음으로 이동
+                    loopTop: false,         //처음 장면에서 마지막으로 이동 여부
+                    
+                    navigation: false,
+                    afterRender: function(){
+                        $('#pp-nav').addClass('custom');
+                    },
+                    afterLoad: function(anchorLink, index){
+                        if(index>1){
+                            $('#pp-nav').removeClass('custom');
+                        }else{
+                            $('#pp-nav').addClass('custom');
+                        }
+                    }
+                });
+
+		});  //$(function)	
+        
+
+</script>
+
+
+
+</head>
+
+	<body>
+
+   
+       <ul id="menu">
+           <li data-menuanchor="page1" class="active"><a href="#page1">Home</a></li>
+           <li data-menuanchor="page2"><a href="#page2">About</a></li>
+           <li data-menuanchor="page3"><a href="#page3">Projects</a></li>
+           <li data-menuanchor="page4"><a href="#page4">Contact</a></li>
+       </ul>
+   
+   
+      <div id="pagepiling">
+         
+          <div class="section">
+           
+           <div id="dateBox">TODAY </div>
+           
+           <div id="port">
+               <div class="typeBox"></div>
+               <h1>Portfolio</h1>
+           </div>
+              
+              <button id="scrolldown">Scroll Down
+                <div id="mouse">
+                  <div id="mousewheel"></div>
+                </div>
+              </button>
+              
+              
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <div class="section">
+             <div id="sec2">
+                  <h1>About Me.</h1>
+                  
+                  <div id="sec2inbox">
+                      
+                    <div id="sec2left">
+                       <img src="images3/daisy2.png" alt="daisy">
+                       <div id="me">
+                            <h3>안은영 95.03.16</h3>
+                            <h4>상상을 현실로 구현해내는 웹퍼블리셔라는 직무에 우연히 흥미를 가지게 되어 도전하게 됐습니다. 사람들과 원활한 의사소통을 통해 프로젝트를 완성시키며, 트렌드에 맞춰 프론트엔드 개발자까지 꾸준히 성장하는 탐나는 인재가 되겠습니다. </h4>
+                        </div>
+                        
+                    </div>
+                                 
+                    <div id="sec2right">
+                       <div id="sec2Rtop">
+                           <div id="RtopLeft">
+                               <div id="neon1"><h3>EXPERIENCE</h3>
+                                   <div class="neonef1"></div>
+                               </div>
+                                
+                            <h5>2021.12 - 2022.05<br/> NCS기반 반응형 UX/UI디자인(웹퍼블리셔) 과정 수료</h5>
+                            <h5>2019.05 - 2021.03 잉글리쉬무무 영어강사</h5>
+                            <h5>2018.12 - 2019.02 광주은행 인턴 수료</h5>
+                            <h5>2018.02 조선대학교 무역학과 졸업</h5>
+                           </div>
+                           
+                           <div id="RtopRight">
+                               <div id="neon2"><h3>CERTIFICATE</h3>
+                                   <div class="neonef2"></div>
+                               </div>
+                               
+                            <h5>2022.08 GTQi 1급(시험 예정)</h5>
+                            <h5>2022.08 GTQ 1급(결과 예정)</h5>
+                            <h5>2022.04 웹디자인기능사</h5>
+                            <h5>2021.09 컴퓨터활용능력 1급</h5>
+                           </div>
+                        </div>
+                        
+                        <div id="sec2Rbot">
+                            <div id="neon3"><h3>SKILLS&amp;TOOLS</h3>
+                                <div class="neonef3"></div>
+                            </div>
+                            
+                            <div id="skillsbox">
+                                <img src="images3/html.png" alt="html">
+                                <img src="images3/css.png" alt="css">
+                                <img src="images3/java.png" alt="java">
+                                <img src="images3/jquery.png" alt="jquery">
+                                <img src="images3/photo.png" alt="photoshop">
+                                <img src="images3/illl.png" alt="ill">
+                                <img src="images3/responsive.png" alt="responsive">
+                                <img src="images3/bracket.png" alt="bracket">
+                                <img src="images3/vscode.png" alt="vscode">
+                            </div>
+                        </div>
+                    </div>                         
+                                  
+                  </div>
+                  
+              </div>
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <div class="section">
+              
+              <h1 id="sec3h1">Projects.</h1>
+                 
+
+                                  
+              <div id="sec3inbox">
+
+                        <div id="slideBox">
+                           
+                            <div class="slideIn">
+                                <div class="slideInLeft">
+                                    <img src="images3/com1.png" alt="project">
+                                </div>
+                                
+                                <div class="slideInRight">
+                                   <div class="webskills">
+                                       <div class="redesign">리디자인</div>
+                                       <div class="responsive">반응형</div>
+                                   </div>
+                                    <h2>Krispy Kreme</h2>
+                                    <h3>프로젝트 소개</h3>
+                                    <p>: 크리스피크림만의 정체성을 나타내기 위해 대표적인 색을 사이트에도 사용하여 기존의 크리스피크림 홈페이지와는 다르게 발랄하고 긍정적인 느낌으로 디자인하였습니다. 동적인 느낌을 많이 주기 위해 다양한 css기법과 플러그인을 적용시켜 메인사이트와 서브사이트 모두 구현하였습니다.</p>
+                                    <h3>제작기간</h3>
+                                    <p>한달</p>
+                                    <h3>참여도</h3>
+                                    <p>개인프로젝트<br/>디자인 100% 코딩 100%</p>
+                                    
+                                    <div class="sec3BT">
+                                        <a href ="http://eysr.dothome.co.kr/index.html" target="_blank" class="webBT">WEB</a>
+                                        <a href ="http://eysr.dothome.co.kr/index.html" target="_blank" class="mobileBT">MOBILE</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                              
+                            <div class="slideIn">
+                                <div class="slideInLeft">
+                                   <div class="webskills">
+                                       <div class="redesign">리디자인</div>
+                                       <div class="responsive">반응형</div>
+                                   </div>                                   
+                                    <h2>Gentle Monster</h2>
+                                    <h3>프로젝트 소개</h3>
+                                    <p>: 기존 젠틀몬스터 메인페이지의 부족한 콘텐츠를 보완시키고 , 젠틀몬스터의 미래지향적인 느낌에 어울리는 디자인으로 작업하였습니다. 상단의 로그인을 클릭하면 로그인 모달창이 나타도록 하였고, 중간에 영상을 삽입한 홍보섹션을 만들었고, 베스트셀러와 SNS이미지를 한눈에 볼 수 있게 구현하였습니다. </p>
+                                    <h3>제작기간</h3>
+                                    <p>3일</p>
+                                    <h3>참여도</h3>
+                                    <p>개인프로젝트<br/>디자인 100% 코딩 100%</p>
+                                    
+                                    <div class="sec3BT">
+                                        <a href="http://eysr.dothome.co.kr/gm.html" target="_blank" class="webBT">WEB</a>
+                                        <a href="http://eysr.dothome.co.kr/gm.html" target="_blank" class="mobileBT">MOBILE</a>
+                                    </div>                                    
+                                </div>
+                                
+                                <div class="slideInRight gentleimg">
+                                    <img src="images3/com2.png" alt="project">
+                                </div>
+                            </div>
+                              
+                            <div class="slideIn">
+                                <div class="slideInLeft">
+                                    <img src="images3/com3.png" alt="project">
+                                </div>
+                                
+                                <div class="slideInRight">
+                                   <div class="webskills">
+                                       <div class="responsive">반응형</div>
+                                   </div>                                   
+                                    <h2>Layout Example</h2>
+                                    <h3>프로젝트 소개</h3>
+                                    <p>: 사이트의 컨셉을 정해 그에 맞는 색감과 사진을 선정하여 디자인하였고, 이지스크롤, 스크롤 효과 등을 적용시켜 반응형까지 구현하였습니다.</p>
+                                    <h3>제작기간</h3>
+                                    <p>2일</p>
+                                    <h3>참여도</h3>
+                                    <p>코딩 100%</p>
+
+                                    <div class="sec3BT">
+                                        <a href="http://eysr.dothome.co.kr/220303" target="_blank" class="webBT">WEB</a>
+                                        <a href="http://eysr.dothome.co.kr/220303" target="_blank" class="mobileBT">MOBILE</a>
+                                    </div>                                  
+                                </div>
+                            </div>
+                              
+                            <div class="slideIn">
+                                <div class="slideInLeft">
+                                   <div class="webskills">
+                                       <div class="responsive">반응형</div>
+                                   </div>                                     
+                                    <h2>Layout Example</h2>
+                                    <h3>프로젝트 소개</h3>
+                                    <p>: 레이아웃 디자인 사이트를 컨셉에 맞춰 디자인하였고, 간단한 슬라이드와 반응형에 맞춰 이미지를 레이아웃 하였습니다.</p>
+                                    <h3>제작기간</h3>
+                                    <p>1일</p>
+                                    <h3>참여도</h3>
+                                    <p>코딩 100%</p>
+                                                      
+                                    <div class="sec3BT">
+                                        <a href="http://eysr.dothome.co.kr/220330_responsive.html" target="_blank" class="webBT">WEB</a>
+                                        <a href="http://eysr.dothome.co.kr/220330_responsive.html" target="_blank" class="mobileBT">MOBILE</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="slideInRight layoutimg">
+                                    <img src="images3/com4.png" alt="project">
+                                    
+                                </div>
+                            </div>  
+                               
+                            <div class="slideIn">
+                                <div class="slideInLeft">
+                                    <img src="images3/com5.png" alt="project">                                    
+                                </div>
+                                
+                                <div class="slideInRight">
+                                   <div class="webskills">
+                                       <div class="responsive">반응형</div>
+                                   </div>                                      
+                                    <h2>Porfolio</h2>
+                                    <h3>프로젝트 소개</h3>
+                                    <p>: 카드 슬라이드형식으로 포트폴리오를 가독성있도록 깔끔하게 디자인하였습니다. 메인 슬라이드 상단에 오늘 날짜와 시간을 나타내었고, 슬라이드를 구현하여 프로젝트를 나열하였습니다. </p>
+                                    <h3>제작기간</h3>
+                                    <p>3일</p>
+                                    <h3>참여도</h3>
+                                    <p>개인프로젝트<br/>디자인 100% 코딩 100%</p>
+                                    
+                                    <div class="sec3BT">
+                                        <a href="http://aeunyoung.dothome.co.kr" target="_blank" class="webBT">WEB</a>
+                                        <a href="http://aeunyoung.dothome.co.kr" target="_blank" class="mobileBT">MOBILE</a>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            
+                        </div> <!--slideBox-->
+                        
+                  
+                      <div class="slideBT slideLeft">&#10229;</div>
+                      <div class="slideBT slideRight">&#10230;</div>
+                  </div> <!--sec4Inbox-->
+              
+              </div>
+                  
+          
+          
+          
+          
+          
+          
+          <div class="section">
+             <div id="sec4">
+                  <h1>Contact.</h1><br/><br/>
+                  
+                  <div id="sec4inbox">
+                      <h3>저의 포트폴리오를 열람해주셔서 감사합니다.</h3><br/>
+                      <h4><span><i class="fa-solid fa-phone"></i>&nbsp;PHONE</span><br/>010-2915-6920</h4><br/>
+                      <h4><span><i class="fa-solid fa-envelope"></i>&nbsp;E-MAIL</span><br/>ahneunyoungnim@gmail.com</h4><br/>
+                      <h4><span><i class="fa-brands fa-github"></i>&nbsp;Github</span>
+                      <br/>https://github.com/A-ey</h4>
+                      <div id="copyright">
+                      <h5>© 2022 AHN EUNYOUNG. All Rights Reserved.<br/>본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다.<br/>사용된 일부 이미지 및 폰트 등은 별도의 출처가 있음을 밝혀 드립니다.</h5>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+          
+        </div> <!--pagepiling-->
+          
+
+
+    
+    
+    
+    
+            <script>
+            var typed = new Typed('.typeBox', {
+                strings: ["Web Publisher", "UX/UI Designer"],
+                startDelay: 1000,     //문자 등장 전 대기 시간   
+                typeSpeed: 50,      //문자 타이핑 시간   
+                loop:true,               //효과 반복 여부(true, false)   
+                //cursorChar: '_',      //타이핑 커저 모양   
+                showCursor: false,    //타이핑 커저 보이기(true, false)   
+                backDelay: 2000,     //문자 완성 후 지워지기 전 대기 시간   
+                fadeOut: true,       //페이드아웃 효과(true, false)   
+                smartBackspace: true,
+                loopCount: true,
+            });
+        </script>
+        
+        
+        <script>
+            AOS.init();
+        </script>
+        
+        
+</body>
+
+</html>
