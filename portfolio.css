@@ -25,6 +25,7 @@ margin: 10px; transition: .3s; border-radius: 4px;
 #menu li.active { background: rgba(0,0,0, 0.8) }
 #menu li.active a { color: #ffcc33; }
 
+#dark{position: fixed; top: 10%; right: 10px; z-index:10; border-radius: 10px; border:1px solid black; padding:5px 10px; cursor: pointer; background-color: black; color:#fc3; font-family: 'Montserrat'}
 
 #dateBox{position: absolute; top:70px; left: 3%; font-weight: 700; font-size: 1.2rem; }
 #port{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) skewX(-10deg); }

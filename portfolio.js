@@ -19,6 +19,44 @@ function clock() {
 }
 
 
+
+
+//흑백 모드
+function Darkmode() {
+      var target = document.querySelector('#dark');
+    
+      if(target.value === 'DARK mode'){
+      target.value ='LIGHT mode';      
+      target.style.color ='#c9c7c7';    
+       
+      //모든 섹션의 배경색 흑백주기      
+      var sDark = document.querySelectorAll('.section');          
+      var i = 0;
+          while(i < sDark.length){
+            sDark[i].style.backgroundColor='#c9c7c7'
+            i = i+1;    
+                };
+          
+      document.querySelector('#menu li.active a').style.color ='#c9c7c7';
+      document.querySelector('#sec2 h1').style.color= 'black';   
+      document.querySelector('#sec3h1').style.color= 'black'; 
+      
+      //모든 프로젝트 버튼 흑백으로 색변경      
+      var rDark = document.querySelectorAll('.redesign, .responsive, .sec3BT a, .mobileBT');
+      var i =0;      
+          while(i < rDark.length){
+            rDark[i].style.color= '#c9c7c7';    
+            i = i+1;
+                };      
+
+      } else {
+          target.value = 'DARK mode'
+      }
+}
+
+
+
+
 //슬라이드 좌우 이동
 
 function slideLeft(){
